@@ -53,3 +53,30 @@ const r4 = "Original: \"" + v4 + "\" | Converted: " + c4 + " | isNaN: " + isNaN4
 const conversionOutput = "<p>" + r1 + "</p><p>" + r2 + "</p><p>" + r3 + "</p><p>" + r4 + "</p>";
 document.getElementById("numberConversionOutput").innerHTML = conversionOutput;
 
+// ==========================
+// Part 3: Math and Formatting
+// ==========================
+
+// Create values
+const item = 24.99;
+const shipping = 5.50;
+const tax = 0.10;
+
+// Math
+const subtotal = item + shipping;
+const taxAmount = subtotal * tax;
+const total = subtotal + taxAmount;
+
+// Formatting
+const formattedSubtotal = subtotal.toFixed(2);
+const formattedTax = taxAmount.toFixed(2);
+const formattedTotal = total.toFixed(2);
+
+// Display
+const mathOutput = "<p>Item price: $" + item.toFixed(2) + "</p>" +
+                   "<p>Shipping: $" + shipping.toFixed(2) + "</p>" +
+                   "<p>Tax: " + (tax * 100).toFixed(0) + "%</p>" +
+                   "<p>Subtotal: $" + formattedSubtotal + "</p>" +
+                   "<p>Tax Amount: $" + formattedTax + "</p>" +
+                   "<p>Total: $" + formattedTotal + "</p>";
+document.getElementById("mathOutput").innerHTML = mathOutput;
